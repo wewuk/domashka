@@ -1,0 +1,20 @@
+.header {
+    background: #d89d66;
+    height: 60px;
+}
+.nav {
+    color: #000;
+}
+
+.quote {
+    background: #f1d1b2;
+}
+
+.footer {
+    background: #6b1cc5;
+    height: 300px;
+}
+
+.link {
+    color: #fff;
+}
