@@ -1,0 +1,32 @@
+body {
+    background: #3a3a3a;
+    color: #fff;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.title {
+    transform: translate(900px);
+}
+
+.title::before {
+    position: absolute;
+    content: "";
+    background: rgb(238, 128, 128);
+    width: 50px;
+    height: 50px;
+    border: #fff solid;
+    border-radius: 100%;
+    transform: translate(-60px, -10.1px);
+}
+
+.title::after {
+    position: absolute;
+    content: "";
+    background: rgb(103, 94, 236);
+    width: 50px;
+    height: 50px;
+    border: #fff solid;
+    border-radius: 100%;
+    transform: translate(6.7px, -10.1px);
+}

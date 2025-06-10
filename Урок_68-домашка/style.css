@@ -1,0 +1,26 @@
+body {
+    background: #202020;
+    color: #ffffff;
+}
+
+.wdawdaw {
+    position: relative;
+    background: #ffffff;
+    right: 50px;
+    bottom: 100px;
+    width: 45vw;
+    height: 100px;
+    position: fixed;
+    border-radius: 5px;
+}
+
+.sefsaw {
+    position: absolute;
+    background: red;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    top: -30px;
+    left: 70px;
+}
+
