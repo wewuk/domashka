@@ -1,5 +1,5 @@
 const firstUser = {
-    name: `Danil`,
+    name: 'Danil',
     age:16
 }
 
@@ -16,23 +16,26 @@ SecondUser.john.sayHello(`john`)
 
 const users = [
     {
-        name: `alex`,
+        name: 'alex',
         age: 23,
-        isAdmim: false
+        isAdmin: false
     },
 
     {
-        name: `john`,
+        name: 'john',
         age: 30,
-        isAdmim: true
+        isAdmin: true
     }
 ]
 
 
 
-const someUsers = [0, 1, 2, 3]
+let countUsers = 0
 
-for (let i = 0; i < someUsers.length; i++) {
-    console.log(`Обычных пользователей 3`)
+for (let i = 0; i < users.length; i++) {
+    if (user[i].isAdmin === false) {
+        countUsers++
 }
+
+console.log(countUsers)
 
