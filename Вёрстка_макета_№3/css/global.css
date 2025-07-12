@@ -1,0 +1,244 @@
+:root {
+    --general-text: #312C27;
+    --general-bg: #FFF9F4;
+    --accent-color: #FFA55C;
+    --accent-bg: #FFE0CB;
+    --accent-text: #1F1711;
+}
+
+
+body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    color: var(--general-text);
+    background: var(--general-bg);
+}
+
+.body--open-menu {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main__about {
+    padding: 140px 0;
+}
+
+.main__program {
+    padding-bottom: 145px;
+}
+
+.main__gallery {
+    padding-bottom: 140px;
+}
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.burger-icon {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--general-text);
+    position: relative;
+    transform: rotate(0);
+    transition: all .3s;
+}
+
+.burger-icon span::before {
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--general-text);
+
+    transform: rotate(0);
+    transition: all .3s;
+}
+
+.burger-icon span::after {
+    position: absolute;
+    content: '';
+    top: -8px;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--general-text);
+
+    transform: rotate(0);
+    transition: all .3s;
+}
+
+.body--open-menu .burger-icon span::before {
+    top: 0;
+    transform: rotate(90deg);
+    transition: all .3s;
+}
+
+.body--open-menu .burger-icon span::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition: all .3s;
+}
+
+.body--open-menu .burger-icon span {
+    transform: rotate(45deg);
+    transition: all .3s;
+}
+
+.body-modal--open {
+    overflow: hidden;
+}
+
+.body-modal--open .modal {
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    border-radius: 60px;
+    padding: 3px 15px;
+    height: 62px;
+    background: var(--accent-color);
+    transition: all .3s;
+}
+
+.button:hover {
+    background: #FF9138;
+}
+
+
+.modal {
+    position: fixed;
+    background: #00000071;
+    inset: 0;
+    z-index: 10;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.modal__window {
+    background: var(--general-bg);
+    border-radius: 20px;
+    padding: 0 60px 60px;
+    max-width: 428px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.modal__cancel {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal__cancel path,
+.modal__cancel rect {
+    transition: all .3s;
+}
+
+.modal__cancel:hover path,
+.modal__cancel:hover rect {
+    stroke: #AC907A;
+}
+
+.modal__img {
+    max-width: 100%;
+    margin-top: -65px;
+    margin-bottom: 15px;
+}
+
+.modal__title {
+    font-family: "Gabriola", "Arial", sans-serif;
+    color: var(--accent-text);
+    font-size: 42px;
+    line-height: 0.9;
+    margin-bottom: 10px;
+}
+
+.modal__text {
+    margin-bottom: 30px;
+}
+
+.modal__form {
+    max-width: 308px;
+}
+
+.modal__form-input {
+    font-size: 16px;
+    display: block;
+    background: transparent;
+    width: 100%;
+    border: 1px solid #AC907A;
+    border-radius: 100px;
+    padding: 19px 28px;
+    margin-bottom: 10px;
+    transition: all .3s;
+}
+
+.modal__form-input:hover {
+    border-color: var(--accent-color);
+}
+
+.modal__form-input::placeholder {
+    color: #AC907A;
+    transition: all .3s;
+}
+
+.modal__form-input:hover::placeholder {
+    color: var(--accent-color);
+}
+
+.modal__form-button {}

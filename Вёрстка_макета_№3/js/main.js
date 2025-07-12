@@ -6,7 +6,7 @@ const modal = document.querySelector('.modal')
 const modalCloseBtn = document.querySelector('.modal__cancel')
 
 // ===================================================================
-// ========================burger===========================================
+// ========================burger=====================================
 const openBurger = () => {
     body.classList.toggle('body--open-menu')
 }
@@ -26,7 +26,7 @@ document.addEventListener('keydown', event => {
     }
 })
 // ===================================================================
-// ===========================modal========================================
+// ===========================modal===================================
 const closeModal = () => {
     body.classList.remove('body-modal--open')
 }
@@ -52,7 +52,7 @@ document.addEventListener('keydown', event => {
     }
 })
 // ===================================================================
-// ===========================tab========================================
+// ===========================tab=====================================
 const tabControls = document.querySelector('.tab-controls')
 
 tabControls.addEventListener('click', event => {
@@ -72,7 +72,7 @@ tabControls.addEventListener('click', event => {
     tabControl.classList.add('tab-controls__link--active')
 })
 // ===================================================================
-// =========================accordion==========================================
+// =========================accordion=================================
 const accordionLists = document.querySelectorAll('.accordion-list')
 
 accordionLists.forEach(el => {
@@ -101,6 +101,37 @@ accordionLists.forEach(el => {
         }
 
     })
+})
+// ===================================================================
+// ===========================slider-gallery==========================
+const swiper = new Swiper('.gallery__slider', {
+    spaceBetween: 15,
+    slidesPerView: 1.5,
+
+    pagination: {
+        el: '.gallery__pagination',
+        type: 'fraction'
+    },
+
+    navigation: {
+        nextEl: '.gallery__next',
+        prevEl: '.gallery__prev',
+    },
+
+    breakpoints: {
+        451: {
+            slidesPerView: 2,
+            spaceBetween: 15
+        },
+        601: {
+            slidesPerView: 3,
+            spaceBetween: 15
+        },
+        1101: {
+            slidesPerView: 4,
+            spaceBetween: 32
+        }
+    }
 })
 // ===================================================================
 // ===================================================================
