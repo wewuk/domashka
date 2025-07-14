@@ -42,6 +42,10 @@ body {
     padding-bottom: 140px;
 }
 
+.main__testimonials {
+    padding-bottom: 140px;
+}
+
 .container {
     max-width: 1310px;
     margin: 0 auto;
