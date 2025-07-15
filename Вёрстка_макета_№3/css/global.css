@@ -46,6 +46,10 @@ body {
     padding-bottom: 140px;
 }
 
+.main__contact {
+    padding: 140px 0 140px;
+}
+
 .container {
     max-width: 1310px;
     margin: 0 auto;

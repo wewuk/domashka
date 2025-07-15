@@ -722,11 +722,167 @@
 .testimonials__scrollbar .swiper-scrollbar-drag {
     background: var(--accent-color);
 }
+
 /* ================================================================== */
 /* ================================================================== */
 
+.contact {
+    background: url("../img/decor/background-last.png") 50% 100% / cover no-repeat;
+}
 
+.contact__inner {
+    display: flex;
+    align-items: end;
+    gap: 84px;
+    position: relative;
+}
 
+.contact__inner::before {
+    position: absolute;
+    content: url("../img/decor/yagodi-big.png");
+    top: -4%;
+    left: 0%;
+}
+
+.contact__inner::after {
+    position: absolute;
+    content: url("../img/decor/yagodi-small.png");
+    top: 4%;
+    right: 0%;
+}
+
+.contact__img {}
+
+.contact__img img {
+    width: 100%;
+    filter: drop-shadow(0px 4px 30px rgba(198, 176, 161, 0.3));
+}
+
+.contact__body {
+    max-width: 420px;
+}
+
+.contact__title {
+    font-family: "Gabriola";
+    font-size: 74px;
+    line-height: 0.82;
+    color: var(--accent-text);
+    margin-bottom: 20px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact__name {
+    border: 1px solid #AC907A;
+    border-radius: 100px;
+    background: transparent;
+    padding: 19px 28px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    transition: all .4s;
+}
+
+.contact__name::placeholder {
+    color: #AC907A;
+
+    transition: all .4s;
+}
+
+.contact__name:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.contact__name:hover.contact__name::placeholder {
+    color: var(--accent-color);
+}
+
+.contact__tel {
+    border: 1px solid #AC907A;
+    border-radius: 100px;
+    background: transparent;
+    padding: 19px 28px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    transition: all .4s;
+}
+
+.contact__tel::placeholder {
+    color: #AC907A;
+
+    transition: all .4s;
+}
+
+.contact__tel:hover {
+    border: 1px solid var(--accent-color);
+}
+
+.contact__tel:hover.contact__tel::placeholder {
+    color: var(--accent-color);
+}
+
+.contact__lable-checkbox {
+    font-size: 13px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.contact__lable-checkbox a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.contact__checkbox {
+    appearance: none;
+    border: 2px solid #AC907A;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+
+    transition: all .4s;
+}
+
+.contact__checkbox::before {
+    position: absolute;
+    content: '';
+    inset: 1.9px;
+    background: url("../img/icons/chekbox-icon.svg") 50% 50% / 100% no-repeat;
+    width: 10px;
+    height: 7px;
+    opacity: 0;
+
+    transition: all .4s;
+}
+
+.contact__checkbox:hover {
+    border: 2px solid var(--accent-color);
+}
+
+.contact__checkbox:checked {
+    background: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.contact__checkbox:checked::before {
+    opacity: 1;
+}
+
+.contact__button {
+    width: 100%;
+}
 
 /* ================================================================== */
 /* ================================================================== */
@@ -755,6 +911,10 @@
 
     .tab-controls {
         flex-wrap: wrap;
+    }
+
+    .contact__inner::after {
+        top: -15%;
     }
 
     .footer__inner {
@@ -788,6 +948,11 @@
     }
 
     .accordion-list__content {
+        gap: 30px;
+    }
+
+    .contact__inner {
+        align-items: center;
         gap: 30px;
     }
 }
@@ -882,6 +1047,16 @@
     .main__gallery {
         padding-bottom: 80px;
     }
+
+    .contact__inner {
+        justify-content: center;
+    }
+
+    .contact__img {
+        display: none;
+    }
+
+    .contact__body {}
 }
 
 @media (max-width: 800px) {
@@ -941,9 +1116,13 @@
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .testimonials__nav {
         align-self: flex-end;
+    }
+
+    .contact__inner::before {
+        top: -27%;
     }
 }
 
@@ -1079,6 +1258,18 @@
     .main__testimonials {
         padding-bottom: 80px;
     }
+
+    .contact__inner::after {
+        top: -20%;
+    }
+
+    .contact__body {
+        text-align: center;
+    }
+
+    .contact__title {
+        font-size: 12vw;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1117,5 +1308,17 @@
 
     .testimonials__slide {
         padding: 15px 15px 10px;
+    }
+
+    .main__contact {
+        padding: 70px 0 80px;
+    }
+
+    .contact__inner::before {
+        display: none;
+    }
+
+    .contact__inner::after {
+        display: none;
     }
 }
