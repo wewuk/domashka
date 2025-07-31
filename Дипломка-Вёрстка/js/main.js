@@ -217,6 +217,33 @@ filters.addEventListener('click', event => {
     filter.classList.add('accordion-content__row--active')
 })
 // ===================================================================
+// =========================offers-plus-minus=================================
+
+// =========plus
+document.querySelectorAll('.counter').forEach(counter => {
+    const btn = counter.querySelector('.incrementBtn');
+    const numberEl = counter.querySelector('.numberContainer');
+
+    btn.addEventListener('click', () => {
+        let currentNumber = parseInt(numberEl.textContent, 10);
+        currentNumber += 1;
+        numberEl.textContent = currentNumber;
+    });
+});
+// =========minus
+document.querySelectorAll('.counter').forEach(counter => {
+    const btn = counter.querySelector('.decrementBtn');
+    const numberEl = counter.querySelector('.numberContainer');
+
+    btn.addEventListener('click', () => {
+        let currentNumber = parseInt(numberEl.textContent, 10);
+        if (currentNumber > 0) {
+            currentNumber -= 1;
+            numberEl.textContent = currentNumber;
+        }
+    });
+});
+// ===================================================================
 // =========================seeAll-comment===================================
 const commentButton = document.querySelector('.comment__button')
 const commentItems = document.querySelectorAll('.comment__item')

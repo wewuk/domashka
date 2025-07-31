@@ -552,30 +552,30 @@
 }
 
 .offers__slide-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #111;
     position: relative;
 }
 
-.offers__slide-quantity::before {
-    position: absolute;
-    content: '';
-    top: 30px;
-    left: 30px;
-    width: 20px;
-    height: 2px;
-    background: url("../img/icons/offers-minus.svg") 0 0 / 100% no-repeat;
+.offers__slide-minus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
-.offers__slide-quantity::after {
-    position: absolute;
-    content: '';
-    top: 20px;
-    right: 30px;
-    width: 20px;
-    height: 20px;
-    background: url("../img/icons/offers-pluse.svg") 0 0 / 100% no-repeat;
+.offers__slide-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
-
 
 .offers__slide-basket {
     align-content: center;
@@ -1143,31 +1143,80 @@
 /* ================================================================= */
 /* ================================================================= */
 
-@media (hover: hover) {
-
+@media (hover: none) and (pointer: coarse) {
     .nav__item-link:hover {
-        opacity: 1;
+        opacity: .8;
     }
 
     .header__shopping-bag:hover path {
-        stroke: var(--accent-color);
+        stroke: var(--accent-color-two);
+    }
+
+    .burger-icon span:hover {
+        background: var(--accent-color-two);
+    }
+
+    .burger-icon span:hover::before,
+    .burger-icon span:hover::after {
+        background: var(--accent-color-two);
     }
 
     .hero__button:hover {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 
     .categories__item:hover .categories__item-content {
-        background: var(--accent-bg-two);
+        background: var(--general-bg);
     }
 
     .categories__item:hover .categories__item-text span path {
-        fill: var(--accent-color-two);
+        fill: var(--general-text);
     }
 
     .categories__item:hover .categories__item-title,
     .categories__item:hover .categories__item-text {
-        color: var(--accent-color-two);
+        color: var(--general-text);
+    }
+
+    .offers__slide-basket:hover {
+        background: var(--accent-bg-two);
+    }
+
+    .comment__score-button:hover {
+        border: 1px solid var(--general-text);
+        color: var(--general-text);
+    }
+
+    .comment__button:hover {
+        border: 1px solid var(--general-text);
+        color: var(--general-text);
+    }
+
+    .comment__button:hover .comment__button-icon path {
+        fill: var(--general-text);
+    }
+
+    .accordion-list-questions__control:hover .accordion-list-questions__control-icon,
+    .accordion-list-questions__control:hover .accordion-list-questions__control-icon::before {
+        background: var(--general-text);
+    }
+
+    .news__button:hover .news__button-icon path {
+        fill: var(--general-text);
+    }
+
+    .news__button:hover {
+        border: 1px solid var(--general-text);
+        color: var(--general-text);
+    }
+
+    .feedback__communicatin-button:hover,
+    .feedback__subscription-button:hover {
+        background: var(--accent-bg-two);
+    }
+
+    .modal__button:hover {
+        background: var(--accent-bg-two);
     }
 }
 
